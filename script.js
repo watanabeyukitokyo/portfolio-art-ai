@@ -143,7 +143,7 @@ const translations = {
     "nav.professional": "PROFESSIONAL",
     "nav.personal": "PERSONAL",
     "nav.ai": "AI",
-    "footer.text": "This site is structured for GitHub Pages deployment as a professional application portfolio.",
+    "footer.text": "As this is public information, I have not included any details that could identify specific individuals or organizations. Please refer to the Resume and Work Experience I will send separately for further details.",
 
     "common.viewProfessional": "View Professional",
     "common.viewAI": "View AI / API Demo",
