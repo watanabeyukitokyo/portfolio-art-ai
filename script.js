@@ -3,7 +3,7 @@ const translations = {
     "nav.professional": "PROFESSIONAL",
     "nav.personal": "PERSONAL",
     "nav.ai": "AI",
-    "footer.text": "応募用ポートフォリオとして GitHub Pages で公開可能な構成です。",
+    "footer.text": "公開情報のため、個人・団体を特定できる情報は掲載しておりません。別途お送りする履歴書・職務経歴書でご確認をお願いいたします。",
 
     "common.viewProfessional": "Professionalを見る",
     "common.viewAI": "AI / API実装を見る",
