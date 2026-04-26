@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Art Research & AI Implementation</title>
+  <meta name="description" content="Professional portfolio for Art Researcher / AI Specialist application." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo">Portfolio</a>
+      <nav class="nav-links">
+        <a href="professional.html" data-i18n="nav.professional">PROFESSIONAL</a>
+        <a href="personal.html" data-i18n="nav.personal">PERSONAL</a>
+        <a href="ai.html" data-i18n="nav.ai">AI</a>
+      </nav>
+      <div class="lang-switch">
+        <button id="lang-jp" class="lang-btn">JP</button>
+        <button id="lang-en" class="lang-btn">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Art Research × Analytics × AI Implementation</p>
+          <h1 data-i18n="index.title">リサーチ、英語、AI。<br>3つの実務力で、アート市場の意思決定を加速させます。</h1>
+          <p class="lead" data-i18n="index.lead">
+            PwCでの戦略コンサルティングを起点に、海外勤務・通訳翻訳・美術品販売・会社経営・AI評価業務まで、25年超のキャリアで一貫して「複雑な情報を、判断に使える形に変換する」仕事をしてきました。貴社が掲げるアート市場の情報非対称性の解消、そしてAIによる事業実装の両面で即戦力として貢献します。
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="professional.html" data-i18n="common.viewProfessional">Professionalを見る</a>
+            <a class="btn btn-secondary" href="ai.html" data-i18n="common.viewAI">AI / API実装を見る</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="metric">
+            <span class="metric-label">At a Glance</span>
+            <div class="fact-strip">
+              <div class="fact"><span class="fact-number">25+</span><span class="fact-label" data-i18n="index.fact1">年の実務経験</span></div>
+              <div class="fact"><span class="fact-number">3+</span><span class="fact-label" data-i18n="index.fact2">カ国での勤務歴</span></div>
+              <div class="fact"><span class="fact-number">7+</span><span class="fact-label" data-i18n="index.fact3">業種を横断</span></div>
+            </div>
+          </div>
+          <div class="metric">
+            <span class="metric-label" data-i18n="index.metric1Label">強み</span>
+            <strong data-i18n="index.metric1Value">Research / English / Documentation / AI Implementation</strong>
+          </div>
+          <div class="metric">
+            <span class="metric-label" data-i18n="index.metric2Label">専門性</span>
+            <strong data-i18n="index.metric2Value">Contemporary Art / Market Intelligence / AI Adoption</strong>
+          </div>
+          <div class="metric">
+            <span class="metric-label" data-i18n="index.metric3Label">付加価値</span>
+            <strong data-i18n="index.metric3Value">閉じた情報を、意思決定に使える形へ変換すること</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card-grid three">
+          <article class="card">
+            <h3 data-i18n="index.card1Title">Research & Analytics</h3>
+            <p data-i18n="index.card1Text">
+              英語資料・現地情報・多様な一次/二次情報を読み解き、比較・整理・報告する力があります。調査設計、要点抽出、文書化、関係者向け共有まで一気通貫で対応可能です。
+            </p>
+          </article>
+
+          <article class="card">
+            <h3 data-i18n="index.card2Title">Art Market / Contemporary Art</h3>
+            <p data-i18n="index.card2Text">
+              クルーズ船上での美術品オークション運営・販売経験に加え、近年はAWT運営への関与をきっかけに、主にコンテンポラリーアート領域の学習を継続しています。
+            </p>
+          </article>
+
+          <article class="card">
+            <h3 data-i18n="index.card3Title">AI / Implementation</h3>
+            <p data-i18n="index.card3Text">
+              ChatGPT、Claude、Gemini等のLLM活用に加え、海外AI講座での継続学習、AI Trainingプラットフォームでの評価業務、簡易API連携の実装などを通じて、AIを事業実装へつなげる基礎力を高めています。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <div class="card" style="border-left: 4px solid var(--accent);">
+          <h2 data-i18n="index.whyTitle">なぜ御社か</h2>
+          <p data-i18n="index.whyText">
+            日本のアート市場が世界シェアの1%未満にとどまる背景には、情報の非対称性、二次流通の未整備、資産インフラの不足という構造課題があるという貴社のご主張、貴社が取り組むアート市場の「情報流通の健全化」という課題は、私がキャリア全体を通じ一貫して磨き続けてきた、閉じた情報を構造化し意思決定に使える形に変換する能力が、最も直接的に活きる領域だと確信しています。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="card-grid three">
+          <a class="card link-card" href="professional.html">
+            <h3>Professional</h3>
+            <p data-i18n="index.linkPro">
+              実務経験、調査力、英語力、資料化能力、アート市場への接続可能性を紹介しています。
+            </p>
+          </a>
+
+          <a class="card link-card" href="personal.html">
+            <h3>Personal</h3>
+            <p data-i18n="index.linkPersonal">
+              人柄、責任感、継続学習、チームへの向き合い方、アート×AIへの関心を紹介しています。
+            </p>
+          </a>
+
+          <a class="card link-card" href="ai.html">
+            <h3>AI</h3>
+            <p data-i18n="index.linkAI">
+              AI活用経験、AIモデル評価業務、学習状況、API連携デモを掲載しています。
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Portfolio</p>
+      <p data-i18n="footer.text">応募用ポートフォリオとして GitHub Pages で公開可能な構成です。</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

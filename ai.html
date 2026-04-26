@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI | Portfolio</title>
+  <meta name="description" content="AI usage, learning progress, and exchange rate API demo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo">Portfolio</a>
+      <nav class="nav-links">
+        <a href="professional.html" data-i18n="nav.professional">Professional</a>
+        <a href="personal.html" data-i18n="nav.personal">Personal</a>
+        <a href="ai.html" class="active" data-i18n="nav.ai">AI</a>
+      </nav>
+      <div class="lang-switch">
+        <button id="lang-jp" class="lang-btn">JP</button>
+        <button id="lang-en" class="lang-btn">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="page-hero">
+      <div class="container narrow">
+        <p class="eyebrow">AI / API / Automation</p>
+        <h1 data-i18n="ai.title">AI活用経験・学習状況・実装に対する考え方</h1>
+        <p class="lead" data-i18n="ai.lead">
+          AIを、情報収集・要約・比較・文書作成・業務設計・ナレッジ共有を前に進めるための実用的な道具として捉えています。
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <div class="card-grid two">
+          <article class="card">
+            <h2 data-i18n="ai.nowTitle">現在の使用状況</h2>
+            <ul class="list">
+              <li data-i18n="ai.now1">ChatGPT / Claude / Gemini など複数LLMの用途別使い分け</li>
+              <li data-i18n="ai.now2">情報整理、要約、下書き生成、分類、比較検討の支援</li>
+              <li data-i18n="ai.now3">英文ソースの読み込み補助、論点整理、ドラフト作成</li>
+              <li data-i18n="ai.now4">JavaScript / HTML / CSS を用いた簡易なWebページ・API連携実装</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h2 data-i18n="ai.learningTitle">継続的な学習</h2>
+            <ul class="list">
+              <li data-i18n="ai.learn1">School of AI、Udemy、Coursera、ZTM等を用いた継続学習</li>
+              <li data-i18n="ai.learn2">国内外のAI動向のウォッチと実務適用可能性の検討</li>
+              <li data-i18n="ai.learn3">AIモデル評価を通じた品質観点の理解</li>
+              <li data-i18n="ai.learn4">アート市場分析や業務設計への応用可能性の検討</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="card" style="margin-top:18px;">
+          <h2 data-i18n="ai.evalTitle">AIトレーニング・モデル評価</h2>
+          <p data-i18n="ai.evalText">
+            RWS、Outlier、DataAnnotation といったAI Trainingプラットフォームにおいて、AIモデルの評価・改善業務にも従事してきました。生成AIの出力品質、指示追従性、論理性、言語表現、タスク適合性といった観点でモデルを見極める視点を養っています。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container narrow">
+        <div class="section-head">
+          <p class="section-kicker" data-i18n="ai.demoKicker">API Demo</p>
+          <h2 data-i18n="ai.demoTitle">為替レートAPIデモ</h2>
+          <p class="section-desc" data-i18n="ai.demoDesc">
+            海外オークションデータや海外ギャラリー情報を扱う際、通貨換算は基礎的かつ実務的な処理です。
+            このデモでは、公開APIから為替レートを取得し、入力金額を円換算する簡易ツールを実装しています。
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-grid two">
+            <div class="input-group">
+              <label for="currencySelect" data-i18n="ai.currencyLabel">通貨を選択</label>
+              <select id="currencySelect">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+              </select>
+            </div>
+
+            <div class="input-group">
+              <label for="amountInput" data-i18n="ai.amountLabel">金額を入力</label>
+              <input id="amountInput" type="number" min="0" step="0.01" placeholder="10000" />
+            </div>
+          </div>
+
+          <div class="hero-cta" style="margin-top:20px;">
+            <button id="convertBtn" class="btn btn-primary" data-i18n="ai.convertBtn">JPYに換算</button>
+          </div>
+
+          <div id="exchangeStatus" class="api-status" data-i18n="ai.defaultStatus">
+            通貨と金額を入力して換算してください。
+          </div>
+
+          <div id="exchangeResult" class="result-card hidden">
+            <h3 data-i18n="ai.resultTitle">換算結果</h3>
+            <p><strong data-i18n="ai.resultInput">入力:</strong> <span id="inputSummary">-</span></p>
+            <p><strong data-i18n="ai.resultRate">為替レート:</strong> <span id="rateSummary">-</span></p>
+            <p><strong data-i18n="ai.resultConverted">円換算:</strong> <span id="convertedSummary">-</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <div class="section-head">
+          <p class="section-kicker" data-i18n="ai.artDemoKicker">Art API Demo</p>
+          <h2 data-i18n="ai.artDemoTitle">美術作品検索デモ — Art Institute of Chicago API</h2>
+          <p class="section-desc" data-i18n="ai.artDemoDesc">
+            アート作品のリサーチ業務を想定し、公開APIからキーワードで作品を検索・表示するデモです。
+            作家評価DBへの入力、営業資料作成、査定業務の下調べ等、実務フローの起点として機能するイメージです。
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="form-row">
+            <div class="input-group">
+              <label for="artSearchInput" data-i18n="ai.artSearchLabel">作家名または作品キーワード</label>
+              <input id="artSearchInput" type="text" placeholder="例: Yayoi Kusama, Basquiat, Warhol" />
+            </div>
+            <button id="artSearchBtn" class="btn btn-primary" data-i18n="ai.artSearchBtn">検索</button>
+          </div>
+
+          <div id="artStatus" class="api-status" data-i18n="ai.artDefaultStatus">
+            作家名やキーワードを入力して検索してください。
+          </div>
+
+          <div id="artResults" class="art-results hidden"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container narrow">
+        <div class="section-head">
+          <h2 data-i18n="ai.scenarioTitle">貴社業務への AI 実装シナリオ（提案）</h2>
+          <p class="section-desc" data-i18n="ai.scenarioDesc">
+            求人票の業務内容をもとに、入社後に取り組ませていただける可能性のあるAI実装の具体案です。
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="card scenario-card">
+            <span class="scenario-badge">Week 1–2</span>
+            <h3 data-i18n="ai.scenario1Title">査定業務の情報収集自動化</h3>
+            <p data-i18n="ai.scenario1Text">
+              オークションハウス（Christie's、Sotheby's、Phillips等）の公開データをAPI/スクレイピングで定期取得し、
+              作家別の落札価格推移をNotionまたはスプレッドシートに自動反映する仕組みを構築。
+              査定チームが手作業で行っている情報収集の工数を大幅に削減。
+            </p>
+          </div>
+
+          <div class="card scenario-card">
+            <span class="scenario-badge">Week 3–4</span>
+            <h3 data-i18n="ai.scenario2Title">コンディションレポート下書きのAI生成</h3>
+            <p data-i18n="ai.scenario2Text">
+              作品画像＋基本情報をインプットとし、GPT / Claude / Gemini等でレポート下書きを自動生成。テンプレート＋プロンプト設計で品質担保しつつ作成時間を短縮。
+            </p>
+          </div>
+
+          <div class="card scenario-card">
+            <span class="scenario-badge">Month 2</span>
+            <h3 data-i18n="ai.scenario3Title">社内AIナレッジベース＋勉強会の立ち上げ</h3>
+            <p data-i18n="ai.scenario3Text">
+              各部門のAI活用事例をNotionに集約。週次で「AI活用Tips」を共有し、非エンジニアでもAIエージェントをデプロイできる環境を醸成。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <div class="card">
+          <h2 data-i18n="ai.businessTitle">実務上の意味合い</h2>
+          <p data-i18n="ai.businessText">
+            API連携の本質は、単にデータを取得することではなく、現場が使える形に変換することだと考えています。
+            たとえば、海外市場の価格情報取得、通貨換算、比較表作成、社内共有資料作成までをつなげることで、
+            調査・営業・企画・経営判断のスピードを高めることができます。
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Portfolio</p>
+      <p data-i18n="footer.text">応募用ポートフォリオとして GitHub Pages で公開可能な構成です。</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
