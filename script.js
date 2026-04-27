@@ -154,7 +154,7 @@ const translations = {
     "common.resultName": "Display name:",
 
     "index.title": "Research. English. AI. Three practical strengths to accelerate art market decisions.",
-    "index.lead": "Starting from strategy consulting at PwC, through international assignments, translation, art sales, business ownership, and AI evaluation work — across 15+ years I have consistently turned complex information into actionable judgment. I am ready to contribute as an immediate asset to both reducing information asymmetry in the art market and driving AI implementation.",    "index.metric1Label": "Strength",
+    "index.lead": "Starting from strategy consulting at PwC, through international assignments, translation, art sales, business ownership, and AI evaluation work — across 25+ years I have consistently turned complex information into actionable judgment. I am ready to contribute as an immediate asset to both reducing information asymmetry in the art market and driving AI implementation.",    "index.metric1Label": "Strength",
     "index.metric1Value": "Research / English Communication / Documentation / Practical Execution",
     "index.metric2Label": "Focus",
     "index.metric2Value": "Contemporary Art / Market Intelligence / AI Adoption",
